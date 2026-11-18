@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Macondo Literario · Club de lectura de Cien años de soledad</title>
+  <meta name="description" content="Club de lectura Macondo Literario: tres encuentros en noviembre de 2026 para leer Cien años de soledad de Gabriel García Márquez. Línea de tiempo del autor y de la obra, contexto histórico, mapa de personajes, pósters, memes y videos.">
+  <meta name="theme-color" content="#1F3B2D">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231F3B2D'/%3E%3Cpath d='M20 32h24c6 0 10 3 10 3v36s-4-3-10-3H20z' fill='%23F4ECDD'/%3E%3Cpath d='M80 32H56c-6 0-10 3-10 3v36s4-3 10-3h24z' fill='%23E9B83A'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============================================================ 0 · HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="sr-only">Abrir menú</span>
+      </button>
+
+      <a class="logo" href="#inicio">
+        <svg class="logo__icono" viewBox="0 0 40 28" aria-hidden="true" focusable="false">
+          <path d="M3 6c6-3 12-3 17 1v18c-5-4-11-4-17-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M37 6c-6-3-12-3-17 1v18c5-4 11-4 17-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__texto">
+          <span class="logo__nombre" id="logo-nombre">MACONDO</span>
+          <span class="logo__sub" id="logo-sub">LITERARIO</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav-menu" aria-label="Navegación principal">
+        <ul class="nav__lista" id="nav-lista"></ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+
+  <main id="contenido">
+
+    <!-- ========================================================== 1 · HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__texto">
+          <p class="hero__antetitulo" id="hero-antetitulo"></p>
+          <h1 class="hero__titulo">
+            <span class="hero__titulo-1" id="hero-titulo-1"></span>
+            <span class="hero__titulo-2" id="hero-titulo-2"></span>
+          </h1>
+          <p class="hero__lema manuscrita" id="hero-lema"></p>
+          <p class="hero__descripcion" id="hero-descripcion"></p>
+
+          <p class="hero__fechas" id="hero-fechas">
+            <svg class="hero__calendario" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span class="hero__fechas-dias" id="hero-fechas-dias"></span>
+            <span class="hero__fechas-mes" id="hero-fechas-mes"></span>
+          </p>
+
+          <div class="hero__acciones">
+            <a class="btn btn--principal" href="#unete" id="hero-cta"></a>
+            <a class="btn btn--texto" href="#la-obra">Conoce la obra</a>
+          </div>
+        </div>
+
+        <div class="hero__carrusel">
+          <div class="carrusel" id="carrusel">
+            <div class="carrusel__marco">
+              <ul class="carrusel__pista" id="carrusel-pista"></ul>
+              <button class="carrusel__flecha carrusel__flecha--prev" id="carrusel-prev" type="button">
+                <span aria-hidden="true">‹</span><span class="sr-only">Póster anterior</span>
+              </button>
+              <button class="carrusel__flecha carrusel__flecha--next" id="carrusel-next" type="button">
+                <span aria-hidden="true">›</span><span class="sr-only">Póster siguiente</span>
+              </button>
+            </div>
+            <div class="carrusel__puntos" id="carrusel-puntos" role="tablist" aria-label="Pósters del club"></div>
+          </div>
+          <p class="carrusel__pie manuscrita">Leer también es viajar</p>
+        </div>
+      </div>
+      <div class="mariposas" id="mariposas" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========================================================== 2 · ¿POR QUÉ UNIRTE? -->
+    <section class="seccion seccion--clara" id="por-que">
+      <div class="container">
+        <header class="seccion__cabecera revelar">
+          <h2 class="titulo-seccion" id="porque-titulo"></h2>
+          <p class="seccion__intro" id="porque-intro"></p>
+        </header>
+        <ul class="razones" id="razones"></ul>
+        <p class="centrado revelar">
+          <a class="btn btn--principal" href="#unete" id="porque-boton"></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================== 3 · EL AUTOR -->
+    <section class="seccion seccion--papel" id="autor">
+      <div class="container autor__inner">
+        <div class="autor__texto">
+          <header class="seccion__cabecera seccion__cabecera--izq revelar">
+            <h2 class="titulo-seccion" id="autor-titulo"></h2>
+            <p class="autor__nombre" id="autor-nombre"></p>
+            <p class="autor__anios" id="autor-anios"></p>
+            <p class="seccion__intro" id="autor-intro"></p>
+          </header>
+          <blockquote class="cita revelar" id="autor-cita"></blockquote>
+          <ul class="destacados" id="autor-destacados"></ul>
+        </div>
+
+        <figure class="autor__figura revelar">
+          <button class="autor__imagen-btn" id="autor-imagen-btn" type="button">
+            <img id="autor-imagen" src="" alt="" loading="lazy" width="900" height="1200">
+            <span class="autor__imagen-lupa" aria-hidden="true">⤢</span>
+          </button>
+          <figcaption id="autor-figcaption"></figcaption>
+        </figure>
+      </div>
+
+      <div class="container">
+        <ol class="timeline" id="autor-timeline"></ol>
+        <p class="autor__cierre manuscrita revelar" id="autor-cierre"></p>
+        <p class="centrado revelar">
+          <button class="btn btn--contorno" id="autor-infografia-btn" type="button"></button>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================== 4 · VIDEOS -->
+    <section class="seccion seccion--oscura" id="videos">
+      <div class="container">
+        <header class="seccion__cabecera revelar">
+          <h2 class="titulo-seccion" id="videos-titulo"></h2>
+          <p class="seccion__intro" id="videos-intro"></p>
+        </header>
+
+        <div class="reproductor revelar" id="reproductor">
+          <div class="reproductor__marco" id="reproductor-marco"></div>
+          <div class="reproductor__info">
+            <h3 class="reproductor__titulo" id="reproductor-titulo"></h3>
+            <p class="reproductor__descripcion" id="reproductor-descripcion"></p>
+          </div>
+        </div>
+
+        <ul class="videos-lista" id="videos-lista"></ul>
+        <p class="videos-nota" id="videos-nota"></p>
+      </div>
+    </section>
+
+    <!-- ========================================================== 5 · LA OBRA -->
+    <section class="seccion seccion--clara" id="la-obra">
+      <div class="container">
+        <header class="seccion__cabecera revelar">
+          <h2 class="titulo-seccion" id="obra-titulo"></h2>
+          <p class="seccion__intro" id="obra-intro"></p>
+        </header>
+
+        <!-- 5.1 Contexto histórico -->
+        <article class="tarjeta tarjeta--contexto revelar" id="contexto">
+          <div class="tarjeta__cabecera">
+            <h3 class="titulo-bloque" id="contexto-titulo"></h3>
+            <ul class="etiquetas" id="contexto-etiquetas"></ul>
+          </div>
+          <p class="tarjeta__intro" id="contexto-intro"></p>
+
+          <div class="contexto__grid">
+            <ol class="contexto__hitos" id="contexto-hitos"></ol>
+            <figure class="contexto__figura">
+              <button class="contexto__imagen-btn" id="contexto-imagen-btn" type="button">
+                <img id="contexto-imagen" src="" alt="" loading="lazy" width="900" height="1200">
+                <span class="autor__imagen-lupa" aria-hidden="true">⤢</span>
+              </button>
+              <figcaption>Infografía del contexto histórico</figcaption>
+            </figure>
+          </div>
+
+          <div class="contexto__tabla-wrap">
+            <h4 class="titulo-sub" id="contexto-tabla-titulo"></h4>
+            <div class="tabla-scroll">
+              <table class="tabla" id="contexto-tabla"></table>
+            </div>
+          </div>
+
+          <div class="ideas">
+            <h4 class="titulo-sub" id="ideas-titulo"></h4>
+            <ul class="ideas__lista" id="ideas-lista"></ul>
+          </div>
+
+          <p class="tarjeta__acciones">
+            <button class="btn btn--contorno btn--sm" id="contexto-ver-img" type="button"></button>
+            <a class="btn btn--contorno btn--sm" id="contexto-ver-pdf" href="#" target="_blank" rel="noopener"></a>
+          </p>
+        </article>
+
+        <!-- 5.2 Línea de tiempo de la obra -->
+        <article class="tarjeta tarjeta--linea revelar" id="linea-obra">
+          <div class="tarjeta__cabecera">
+            <h3 class="titulo-bloque" id="linea-titulo"></h3>
+          </div>
+          <p class="tarjeta__intro" id="linea-intro"></p>
+
+          <div class="zigzag-wrap">
+            <ol class="zigzag" id="linea-hitos"></ol>
+          </div>
+
+          <p class="tarjeta__acciones">
+            <button class="btn btn--contorno btn--sm" id="linea-ver-img" type="button"></button>
+            <a class="btn btn--contorno btn--sm" id="linea-ver-pdf" href="#" target="_blank" rel="noopener"></a>
+          </p>
+        </article>
+
+        <!-- 5.3 Mapa de personajes -->
+        <article class="tarjeta tarjeta--mapa revelar" id="mapa">
+          <div class="tarjeta--mapa__texto">
+            <h3 class="titulo-bloque" id="mapa-titulo"></h3>
+            <p id="mapa-texto"></p>
+            <p class="tarjeta__acciones">
+              <a class="btn btn--principal btn--sm" id="mapa-boton" href="#" target="_blank" rel="noopener"></a>
+            </p>
+          </div>
+          <div class="tarjeta--mapa__arbol" aria-hidden="true">
+            <svg viewBox="0 0 220 160" class="arbol-svg" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M110 28v22M110 50H50M110 50h60M50 50v18M170 50v18M50 86v18M50 104H22M50 104h28M22 104v16M78 104v16M170 86v18M170 104h-28M170 104h28M142 104v16M198 104v16"/>
+              </g>
+              <g fill="currentColor">
+                <circle cx="110" cy="20" r="9"/><circle cx="50" cy="77" r="9"/><circle cx="170" cy="77" r="9"/>
+                <circle cx="22" cy="129" r="8"/><circle cx="78" cy="129" r="8"/><circle cx="142" cy="129" r="8"/><circle cx="198" cy="129" r="8"/>
+              </g>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================== 6 · REDES Y MEMES -->
+    <section class="seccion seccion--oscura seccion--redes" id="redes">
+      <div class="container redes__inner">
+        <div class="redes__texto">
+          <header class="seccion__cabecera seccion__cabecera--izq revelar">
+            <h2 class="titulo-seccion" id="redes-titulo"></h2>
+            <p class="seccion__intro" id="redes-intro"></p>
+          </header>
+          <ul class="redes__botones" id="redes-botones"></ul>
+        </div>
+
+        <div class="celular revelar">
+          <div class="celular__marco">
+            <div class="celular__notch" aria-hidden="true"></div>
+            <div class="celular__pantalla">
+              <div class="feed__barra">
+                <span class="feed__avatar" aria-hidden="true">M</span>
+                <span class="feed__usuario" id="feed-usuario"></span>
+              </div>
+              <ul class="feed" id="feed"></ul>
+              <div class="feed__puntos" id="feed-puntos" role="tablist" aria-label="Memes del club"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== 7 · ÚNETE -->
+    <section class="seccion seccion--papel" id="unete">
+      <div class="container unete__inner">
+        <div class="unete__datos">
+          <header class="seccion__cabecera seccion__cabecera--izq revelar">
+            <h2 class="titulo-seccion" id="unete-titulo"></h2>
+            <p class="seccion__intro" id="unete-intro"></p>
+          </header>
+          <ul class="encuentros" id="encuentros"></ul>
+          <ul class="datos-extra" id="datos-extra"></ul>
+          <p class="manuscrita unete__frase">¡Todos son bienvenidos!</p>
+        </div>
+
+        <div class="formulario-wrap revelar">
+          <form class="formulario" id="formulario" novalidate>
+            <div class="campo">
+              <label for="campo-nombre" id="label-nombre"></label>
+              <input type="text" id="campo-nombre" name="nombre" required autocomplete="name">
+              <span class="campo__error" id="error-nombre" hidden>Escribe tu nombre.</span>
+            </div>
+            <div class="campo">
+              <label for="campo-correo" id="label-correo"></label>
+              <input type="email" id="campo-correo" name="correo" required autocomplete="email">
+              <span class="campo__error" id="error-correo" hidden>Escribe un correo válido.</span>
+            </div>
+            <div class="campo">
+              <label for="campo-fecha" id="label-fecha"></label>
+              <select id="campo-fecha" name="fecha" required></select>
+              <span class="campo__error" id="error-fecha" hidden>Elige una fecha.</span>
+            </div>
+            <div class="campo">
+              <label for="campo-mensaje" id="label-mensaje"></label>
+              <textarea id="campo-mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+            <button class="btn btn--principal btn--bloque" type="submit" id="form-enviar"></button>
+            <p class="formulario__aviso" id="form-aviso" hidden></p>
+            <p class="formulario__exito" id="form-exito" role="status" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ 8 · FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__marca">
+        <p class="footer__nombre" id="footer-nombre"></p>
+        <p class="footer__lema manuscrita" id="footer-lema"></p>
+      </div>
+      <nav class="footer__nav" aria-label="Secciones">
+        <ul id="footer-nav"></ul>
+      </nav>
+      <div class="footer__equipo">
+        <p class="footer__equipo-titulo" id="footer-equipo-titulo" hidden>Equipo</p>
+        <ul id="footer-integrantes"></ul>
+        <p class="footer__curso" id="footer-curso"></p>
+      </div>
+      <ul class="footer__redes" id="footer-redes"></ul>
+    </div>
+    <div class="container footer__legal">
+      <p id="footer-creditos"></p>
+      <p id="footer-nota"></p>
+    </div>
+  </footer>
+
+  <!-- ============================================================ LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button class="lightbox__cerrar" id="lightbox-cerrar" type="button">
+      <span aria-hidden="true">×</span><span class="sr-only">Cerrar</span>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" type="button">
+      <span aria-hidden="true">‹</span><span class="sr-only">Anterior</span>
+    </button>
+    <figure class="lightbox__figura">
+      <img id="lightbox-img" alt="">
+      <figcaption id="lightbox-pie"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" type="button">
+      <span aria-hidden="true">›</span><span class="sr-only">Siguiente</span>
+    </button>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

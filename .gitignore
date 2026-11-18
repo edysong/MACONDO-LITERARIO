@@ -1,0 +1,20 @@
+# Notas de trabajo que no se publican
+CLAUDE.md
+PROMPT.md
+
+# Archivos del sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependencias y builds (esta página no los usa, pero por si acaso)
+node_modules/
+.vercel/
+.cache/
