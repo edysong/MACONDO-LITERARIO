@@ -120,25 +120,43 @@ las personas que usan lector de pantalla.
 
 ## 2. Cómo publicar la página
 
-### Opción A — GitHub Pages
+El repositorio es <https://github.com/edysong/MACONDO-LITERARIO> y la página se publica en Vercel.
 
-1. Crea una cuenta en [github.com](https://github.com) y un repositorio nuevo, por ejemplo
-   `macondo-literario`. Márcalo como **Public**.
-2. Sube **todos** los archivos de esta carpeta (puedes arrastrarlos con *Add file → Upload files*).
-   Importante: sube `index.html` en la raíz, no dentro de otra carpeta.
-3. Entra en **Settings → Pages**.
-4. En *Source* elige **Deploy from a branch**, rama `main` y carpeta `/ (root)`. Guarda.
-5. Espera un minuto: la dirección queda como
-   `https://tu-usuario.github.io/macondo-literario/`.
+### Paso 1 — Subir los cambios a GitHub
 
-Cada vez que cambien `js/data.js` y lo suban de nuevo, la página se actualiza sola en un par de minutos.
+Desde la carpeta del proyecto, en la terminal:
 
-### Opción B — Netlify (la más rápida)
+```bash
+git add -A
+git commit -m "Actualiza el contenido"
+git push
+```
 
-1. Entra en [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Arrastra la carpeta completa del proyecto a la ventana del navegador.
-3. Listo: Netlify da una dirección pública al instante. Con una cuenta gratuita puedes
-   cambiarle el nombre en *Site settings → Change site name*.
+(La primera vez, si aún no está enlazado el repositorio:
+`git remote add origin https://github.com/edysong/MACONDO-LITERARIO.git` y luego `git push -u origin main`.)
+
+Quien prefiera no usar la terminal puede subir los archivos desde la web de GitHub, con
+*Add file → Upload files*, arrastrando la carpeta completa.
+
+### Paso 2 — Publicar en Vercel
+
+1. Entra en [vercel.com](https://vercel.com) e inicia sesión con la cuenta de GitHub.
+2. **Add New → Project** y elige el repositorio `MACONDO-LITERARIO`.
+3. En *Framework Preset* deja **Other**. No hay que tocar nada más:
+   *Build Command* y *Output Directory* se quedan vacíos, porque la página no se compila.
+4. Pulsa **Deploy**. En menos de un minuto queda publicada en
+   `https://macondo-literario.vercel.app` (el nombre se puede cambiar en *Settings → Domains*).
+
+A partir de ahí, **cada `git push` republica la página sola**. Vercel además deja una vista previa
+de cada cambio antes de tocar la dirección principal.
+
+### Alternativas
+
+- **GitHub Pages:** en el repositorio, *Settings → Pages*, en *Source* elige
+  **Deploy from a branch**, rama `main`, carpeta `/ (root)`. Queda en
+  `https://edysong.github.io/MACONDO-LITERARIO/`.
+- **Netlify:** entra en [app.netlify.com/drop](https://app.netlify.com/drop) y arrastra la carpeta
+  del proyecto. Da una dirección al instante, sin repositorio.
 
 ### Enviar el trabajo sin publicar
 
